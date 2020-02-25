@@ -1,4 +1,4 @@
-# Full Stack Trivia API  Frontend
+# Full Stack Project - Trivia React Frontend
 
 ## Getting Setup
 
