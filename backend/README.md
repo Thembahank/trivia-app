@@ -103,10 +103,10 @@ The API will return three error types when requests fail:
 - 500: Server error
 
 ### Endpoints 
-#### GET /categories
+#### GET /categories/
 - General:
     - Returns a list of categories & success value
-- Sample: `curl http://127.0.0.1:5000/categories`
+- Sample: `curl http://127.0.0.1:5000/categories/`
 
 ```
 {
@@ -122,11 +122,11 @@ The API will return three error types when requests fail:
 }
 ```
 
-#### GET /questions
+#### GET /questions/
 - General:
     - Returns a list of questions, success value, total number of questions, total in page and all the categories
     - Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1. 
-- Sample: `curl http://127.0.0.1:5000/categories`
+- Sample: `curl http://127.0.0.1:5000/questions/`
 
 ``` 
 {
@@ -218,11 +218,11 @@ The API will return three error types when requests fail:
 }
 ```
 
-#### POST /question
+#### POST /questions/
 - General:
     - Creates a new question using the submitted question, answer, category and difficulty. Returns the id of the created question, 
     success value, total questions, and questions list based on current page number to update the frontend. 
-- `curl http://127.0.0.1:5000/questions/?page=2 -X POST -H "Content-Type: application/json" -d '{"question": "2 vs four spaces","answer": "4 spaces","category": "2","difficulty": "2"}'`
+-Sample: `curl http://127.0.0.1:5000/questions/?page=2 -X POST -H "Content-Type: application/json" -d '{"question": "2 vs four spaces","answer": "4 spaces","category": "2","difficulty": "2"}'`
 ```
 {
 	"created": 30,
@@ -250,11 +250,11 @@ The API will return three error types when requests fail:
 	"total_questions": 26
 }
 ```
-#### POST /question
+#### POST /questions/
 - General:
-    - Searches for questions matching a provided string , 
+    - Searches for questions matching a provided string. Returns 
     success value, total questions, and questions list based on current page number to update the frontend.
- `curl http://127.0.0.1:5000/questions/?page=2 -X POST -H "Content-Type: application/json" -d '{"question": "2 vs four spaces",
+- Sample:`curl http://127.0.0.1:5000/questions/?page=2 -X POST -H "Content-Type: application/json" -d '{"search_term": "2 vs four spaces"}`
  
  ```
 {
@@ -318,7 +318,7 @@ The API will return three error types when requests fail:
 
 #### POST /questions/
 - General:
-    - Searches for questions matching a provided string , 
+    - Searches for questions matching a provided string. Returns
     success value, total questions, and questions list based on current page number to update the frontend.
 - `curl http://127.0.0.1:5000/questions/?page=2 -X POST -H "Content-Type: application/json" -d '{"search_term": "2 vs four spaces"}`
  
